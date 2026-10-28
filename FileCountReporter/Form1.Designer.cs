@@ -37,10 +37,9 @@
             // textBoxOutput
             // 
             textBoxOutput.Location = new Point(52, 151);
-            textBoxOutput.Multiline = true;
             textBoxOutput.Name = "textBoxOutput";
             textBoxOutput.ReadOnly = true;
-            textBoxOutput.Size = new Size(185, 34);
+            textBoxOutput.Size = new Size(185, 27);
             textBoxOutput.TabIndex = 0;
             // 
             // buttonCount

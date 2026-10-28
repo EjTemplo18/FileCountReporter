@@ -15,13 +15,17 @@ namespace FileCountReporter
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 selectedFolderPath = dialog.SelectedPath;
-                textBoxOutput.Text = $"Selected folder:{Environment.NewLine}{selectedFolderPath}";
+                textBoxOutput.Text = $"{Environment.NewLine}{selectedFolderPath}";
             }
         }
 
         private void buttonCount_Click(object sender, EventArgs e)
         {
-
+            if (selectedFolderPath == null)
+            {
+                MessageBox.Show("Please Browse for a folder first.");
+                return;
+            }
         }
     }
 }
