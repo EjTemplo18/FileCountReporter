@@ -26,6 +26,22 @@ namespace FileCountReporter
                 MessageBox.Show("Please Browse for a folder first.");
                 return;
             }
+
+            try
+            {
+                int files = Directory.GetFiles(selectedFolderPath).Length;
+                int folders = Directory.GetDirectories(selectedFolderPath).Length;
+
+                textBoxOutput.Text = $"Files: {files} {Environment.NewLine}Folders: {folders}";
+            }
+            catch (IOException)
+            {
+                textBoxOutput.Text = "Error: Could not read the selected Folder!";
+            }
+            catch (UnauthorizedAccessException)
+            {
+                textBoxOutput.Text = "Error: You do not have permission to access the selected folder!";
+            }
         }
     }
 }
