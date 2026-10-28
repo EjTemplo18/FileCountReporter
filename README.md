@@ -1,4 +1,4 @@
 # FileCountReporter
 
 ## Screnshot
-![FileCountReporter form](screenshots/file-countre-porter-image)
+![FileCountReporter form](screenshots/file-count-reporter.png)
